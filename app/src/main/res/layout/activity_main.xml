@@ -95,11 +95,11 @@
 
     <RadioGroup
         android:id="@+id/rg_envio"
-        android:layout_width="195dp"
-        android:layout_height="145dp"
-        android:layout_marginTop="72dp"
+        android:layout_width="209dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="84dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_telefono">
 
@@ -107,20 +107,27 @@
             android:id="@+id/rb_enviourgente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:onClick="asignarEnvio"
             android:text="Envio Urgente (5€)" />
 
         <RadioButton
             android:id="@+id/rb_envionormal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:checked="true"
+            android:onClick="asignarEnvio"
             android:text="Envio normal (4€)" />
 
         <RadioButton
             android:id="@+id/rb_enviolento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Envio Lento (3€)" />
+            android:minHeight="48dp"
+            android:onClick="asignarEnvio"
+            android:text="Envio Lento (3€)"
+            tools:ignore="TouchTargetSizeCheck" />
     </RadioGroup>
 
     <Button
@@ -129,6 +136,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="76dp"
         android:text="Siguiente"
+        android:onClick="siguiente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.94"
